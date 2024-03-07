@@ -35,3 +35,17 @@ Activa=Honda("Honda","Activa",2)
 print(f"Name : {Activa.name}")
 print(f"Brand : {Activa.brand}")
 print(f"Glasses : {Activa.glasses}")
+
+
+# Abstraction
+# Its not inbuilt in python , we need to use a module
+from abc import ABC, abstractmethod
+class CarFactory(ABC):
+    @abstractmethod
+    def create_car(self, *args): pass
+
+class CarFactory2(CarFactory):
+    def create_car(self, *args):   #we need to create abstract method else it will not work
+        pass
+
+Alto=CarFactory2()
